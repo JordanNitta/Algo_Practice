@@ -31,8 +31,7 @@ const expected3 = {};
 function makeFrequencyTable(arr) { 
     // Create object to store frequency table
     var results = {};
-    var array = array.length;
-    for(var i = 0; i < array; i++){
+    for(var i = 0; i < arr.length; i++){
         if(results[arr[i]]){
             results[arr[i]]++
         } else{
@@ -47,3 +46,4 @@ console.log(makeFrequencyTable(arr2))
 console.log(makeFrequencyTable(arr3))
 
 module.exports = { makeFrequencyTable }
+
