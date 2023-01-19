@@ -1,5 +1,5 @@
-const keys1 = ["abc", 3, "yo"];
-const vals1 = [42, "wassup", true];
+const keys1 = ["abc", 3, "yo",];
+const vals1 = [42, "wassup", true,];
 const expected1 = {
     abc: 42,
     3: "wassup",
