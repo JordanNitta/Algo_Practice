@@ -28,7 +28,7 @@ function stringDedupe(str) {
     for(let i = 0; i < str.length; i++){
 }
 
-console.log(stringDedupe(str1))
-console.log(stringDedupe(str2))
-console.log(stringDedupe(str3))
-console.log(stringDedupe(str4))
+console.log(stringDedupe(str1));
+console.log(stringDedupe(str2));
+console.log(stringDedupe(str3));
+console.log(stringDedupe(str4));
