@@ -27,4 +27,28 @@ const expected4 = { quarter: 3, dime: 2, penny: 4 };
  *    denomination names and the value is the amount of that denomination
  *    needed.
  */
-function fewestCoinChange(cents) {}
+function fewestCoinChange(cents) {
+    var change = {}
+
+    if (cents >= 25) {
+        change['quarter'] = Math.floor(cents / 25)
+        cents = cents % 25
+    }
+    if (cents >= 10) {
+        change['dime'] = Math.floor(cents / 10)
+        cents = cents % 10
+    }
+    if (cents >= 5) {
+        change['nickle'] = Math.floor(cents / 5)
+        cents = cents % 5
+    }
+    if (cents > 0 ){
+        change['penny'] = cents
+    }
+    return change
+}
+
+console.log(fewestCoinChange(cents1))
+console.log(fewestCoinChange(cents2))
+console.log(fewestCoinChange(cents3))
+console.log(fewestCoinChange(cents4))
