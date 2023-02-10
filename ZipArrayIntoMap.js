@@ -18,6 +18,8 @@ const expected2 = {};
  * @param {Array<any>} values
  * @returns {Object} The object with the given keys and values.
  */
+// Looping through the keys 
+// At every key and values adding them into my variable called obj
 function zipArraysIntoMap(keys, values) {
     let obj = {};
     for (let i = 0; i < keys.length; i++) {
@@ -28,3 +30,4 @@ function zipArraysIntoMap(keys, values) {
 
 console.log(zipArraysIntoMap(keys1, vals1))
 console.log(zipArraysIntoMap(keys2, vals2))
+
