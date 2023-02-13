@@ -28,22 +28,59 @@ const expected3 = {};
  * @returns {Object<string, number>} A frequency table where the keys are items
  *    from the given arr and the values are the amnt of times that item occurs.
  */
-function makeFrequencyTable(arr) { 
-    // Create object to store frequency table
-    var results = {};
-    for(var i = 0; i < arr.length; i++){
-        if(results[arr[i]]){
+function makeFrequencyTable(arr) {
+    // Create object to store key, values
+    let results = {};
+    // Iterate through the array 
+    for (var i = 0; i < arr.length; i++) {
+        // if it exist then it will add it to the key
+        if (results[arr[i]]) {
             results[arr[i]]++
-        } else{
+        } else {
+            // If it doesn't then we set it to 1
             results[arr[i]] = 1
         }
     }
     return results
 }
-    
+
 console.log(makeFrequencyTable(arr1))
 console.log(makeFrequencyTable(arr2))
 console.log(makeFrequencyTable(arr3))
 
-module.exports = { makeFrequencyTable }
 
+/* 
+Given a non-empty array of odd length containing ints where every int but one
+has a matching pair (another int that is the same)
+return the only int that has no matching pair.
+*/
+
+const two_nums1 = [1];
+const two_expected1 = 1;
+
+const two_nums2 = [5, 4, 5];
+const two_expected2 = 4;
+
+const two_nums3 = [5, 4, 3, 4, 3, 4, 5];
+const two_expected3 = 4; // there is a pair of 4s but one 4 has no pair.
+
+const two_nums4 = [5, 2, 6, 2, 3, 1, 6, 3, 2, 5, 2];
+const two_expected4 = 1;
+
+function oddOccurrencesInArray(nums) {
+    let obj = {}
+    for (let i = 0; i < nums.length; i++) {
+        if (obj[nums[i]]) {
+            obj[nums[i]]++
+        } else if (obj[nums[i]] = 1){
+
+        }else (obj[nums[i]] % 2 != 0)
+        
+    } 
+}
+
+
+console.log(oddOccurrencesInArray(two_nums1))
+console.log(oddOccurrencesInArray(two_nums2))
+console.log(oddOccurrencesInArray(two_nums3))
+console.log(oddOccurrencesInArray(two_nums4))
